@@ -21,7 +21,7 @@ $file = "ast-cli_${tag}_windows_x64.zip"
 $download = "https://github.com/$repo/releases/download/$tag/$file"
 Invoke-WebRequest $download -OutFile "$home_dir\$file"
 
-Write-Host Extracting release files
+#Extract zip file
 Expand-Archive $file -DestinationPath $home_dir -Force
 
 #Delete downloaded zip
